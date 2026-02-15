@@ -1,16 +1,51 @@
-# React + Vite
+Cosmic AI Engineer Portfolio;
+A high-performance, responsive portfolio built to showcase expertise in Agentic AI, Gen AI, and Scalable ML Pipelines;
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Technical Stack:
 
-Currently, two official plugins are available:
+Frontend: React 18, Vite, Tailwind CSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Icons: Lucide-React
 
-## React Compiler
+Animation: Framer Motion / CSS Keyframes
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Deployment: Vercel / GitHub Pages
 
-## Expanding the ESLint configuration
+# Roadmap:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+DAY 1: Foundation & The Cosmic Theme
+
+  Initialized the React project using Vite.
+
+  Configured Tailwind CSS for a dark-themed, "Cosmic" aesthetic.
+
+  Implemented the StarBackground and ThemeToggle components.
+
+  Built the Hero Section with fade-in animations.
+
+DAY 2: Core Components & Skill Logic
+
+  Developed the About Section focusing on my Master’s studies at FAU.
+
+  Created a dynamic Skills Section with category filtering (AI/ML, Frontend, Backend).
+
+  Refinement: Moved from "Percentage Bars" to a modern "Badge Cloud" to focus on expertise rather than  arbitrary numbers.
+
+DAY 3: Project Architecture & Connectivity
+
+  Built a reusable ProjectCard component.
+
+  Implemented the .map() logic to render AI-focused projects dynamically from a data array.
+
+  Developed the Contact Section with a minimalist, centered design for direct recruiter access.
+
+  Fixed cross-component navigation bugs and ID mismatches.
+
+  Post-Mortem: Bug Report & Debugging Log
+
+  
+"Bug Encountered" -	Root Cause	- Debugging Solution
+"Invisible" Projects" - 	Data was defined but the .map() function was missing in the JSX.- Implemented a map loop to return JSX elements for each object in the projects array.
+"Home Button Inactive" -	ID Mismatch - : Navbar looked for #home, but the Hero section was labeled #hero.	Standardized the Hero section ID to id="home".
+"Contact Section Not Rendering" - 	Z-index conflict; the StarBackground was overlapping the section content.	 - Added relative z-10 and block classes to force the section to the foreground.
+"Responsive Typograph" - Typo in Tailwind class (md:test-6xl). -	Corrected to md:text-6xl to ensure proper scaling on desktop.
