@@ -1,29 +1,28 @@
-import { Key } from "lucide-react";
 import { useState } from "react";
 import { cn } from "../lib/utils";
 
 const skills = [
   // AI & Machine Learning Specialization
-  { name: "Python / PyTorch", level: 85, category: "AI/ML" },
-  { name: "Gen AI (LLMs & RAG)", level: 80, category: "AI/ML" },
-  { name: "Agentic AI (LangChain)", level: 75, category: "AI/ML" },
-  { name: "AI/ML Pipelines", level: 70, category: "AI/ML" },
+  { name: "Python / PyTorch", category: "AI/ML" },
+  { name: "Gen AI (LLMs & RAG)", category: "AI/ML" },
+  { name: "Agentic AI (LangChain)", category: "AI/ML" },
+  { name: "AI/ML Pipelines", category: "AI/ML" },
 
-  // Frontend & UI (Essential for AI Demos/Dashboards)
-  { name: "React / Next.js", level: 85, category: "Frontend" },
-  { name: "TypeScript", level: 80, category: "Frontend" },
-  { name: "Tailwind CSS", level: 90, category: "Frontend" },
+  // Frontend & UI
+  { name: "React / Next.js", category: "Frontend" },
+  { name: "TypeScript", category: "Frontend" },
+  { name: "Tailwind CSS", category: "Frontend" },
 
   // Data & Backend
-  { name: "SQL", level: 85, category: "Backend" },
-  { name: "Vector DBs (Chroma/Pinecone)", level: 75, category: "Backend" },
-  { name: "FastAPI / Node.js", level: 80, category: "Backend" },
+  { name: "SQL", category: "Backend" },
+  { name: "Vector DBs (Chroma/Pinecone)", category: "Backend" },
+  { name: "FastAPI / Node.js", category: "Backend" },
 
   // Professional Tools & DevOps
-  { name: "Git / GitHub", level: 90, category: "Tools" },
-  { name: "Docker / Kubernetes", level: 75, category: "Tools" },
-  { name: "VS Code", level: 80, category: "Tools" },
-  { name: "Cloud (AWS/Azure)", level: 65, category: "Tools" }
+  { name: "Git / GitHub", category: "Tools" },
+  { name: "Docker / Kubernetes", category: "Tools" },
+  { name: "Linux / Bash", category: "Tools" },
+  { name: "Cloud (AWS/Azure)", category: "Tools" }
 ];
 
 const categories = ["All", "AI/ML", "Frontend", "Backend", "Tools"];
@@ -33,49 +32,48 @@ export const SkillsSection = () => {
 
     const filteredSkills = skills.filter(
         (skill) => activeCategory === "All" || skill.category === activeCategory);
+
     return ( 
-        <section 
-        id="skills"
-        className="py-24 px-4 relative bg-secondary/30">
-            <div className="container mx:auto max-w-5xl">
+        <section id="skills" className="py-24 px-4 relative bg-secondary/30">
+            <div className="container mx-auto max-w-5xl">
                 <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-                    My <span className="text-primary">Skills</span>
+                    Technical <span className="text-primary">Expertise</span>
                 </h2>
 
-                <div className="flex flex-wrap justify-center gap-4 mb-12">
-                    {categories.map((category, key) => (
+                {/* Filter Buttons */}
+                <div className="flex flex-wrap justify-center gap-4 mb-16">
+                    {categories.map((category) => (
                         <button
-                            key={key}
+                            key={category}
                             onClick={() => setActiveCategory(category)}
-                            className={cn("px-4 py-2 rounded-full text-sm font-medium capitalize",
-                                activeCategory === category ? "bg-primary text-primary-foreground" : "bg-secondary/70 text-foreground hover:bg-secondary/90"
+                            className={cn(
+                                "px-6 py-2 rounded-full text-sm font-medium transition-all duration-300",
+                                activeCategory === category 
+                                    ? "bg-primary text-primary-foreground shadow-[0_0_15px_rgba(var(--primary),0.5)]" 
+                                    : "bg-secondary/50 text-foreground hover:bg-secondary/80"
                             )}
-                                >
-                                {category}
-                                </button>
-                            ))}
-
+                        >
+                            {category}
+                        </button>
+                    ))}
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {filteredSkills.map((skill,key) => (
-                        <div key={key} className="bg-card p-6 rounded-lg shadow-xs card-hover ">
-                            <div className="text-left mv-4">
-                                <h3 className="font-semibold text-lg"> {skill.name}</h3>
-                            </div>
-                            <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
-                            <div className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out]"
-                            style={{ width: skill.level + "%" }}
-                            />
-                            </div>
-                            <div className="text-right mt-1">
-                                <span className="text-sm text-muted-foreground">{skill.level}%</span>
-                                </div>
+                {/* Skills Grid - Modern Badge Style */}
+                <div className="flex flex-wrap justify-center gap-4">
+                    {filteredSkills.map((skill, index) => (
+                        <div 
+                            key={index} 
+                            className="px-6 py-4 rounded-xl border border-white/10 bg-card/50 backdrop-blur-sm 
+                                       hover:border-primary/50 hover:shadow-[0_0_20px_rgba(var(--primary),0.1)] 
+                                       transition-all duration-300 group cursor-default"
+                        >
+                            <h3 className="font-medium text-foreground group-hover:text-primary transition-colors">
+                                {skill.name}
+                            </h3>
                         </div>
                     ))}
                 </div>
             </div>
-
         </section>
     );
 };
