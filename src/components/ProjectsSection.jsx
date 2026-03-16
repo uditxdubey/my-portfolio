@@ -2,32 +2,32 @@ import { ArrowRight, ExternalLinkIcon, Github } from "lucide-react";
 
 const projects = [
     {
-       id: 1,
-       title: "Autonomous Research & Analysis Agent",
-       description: "An intelligent agent capable of multi-step reasoning, web-browsing, and PDF synthesis using LangGraph and OpenAI. Designed to automate complex literature reviews.",
-       image: "/projects/ai1.png", 
-       tags: ["LangChain", "Python", "FastAPI", "React"],
-       demoUrl: "#",
-       githubUrl: "#", 
-    },
+    id: 1, // Update ID as needed
+    title: "Industrial Agentic RAG",
+    description: "A zero-hallucination multi-agent system designed to query and compare industrial automation manuals using a semantic router and hybrid vector stores to prevent cross-brand data bleeding.",
+    image: "/projects/industrial-rag.png", 
+    tags: ["Python", "LlamaIndex", "Groq", "Streamlit", "ChromaDB"],
+    demoUrl: "#", // Add link if hosted
+    githubUrl: "https://github.com/uditxdubey/Industrial-Intelligence-Engine", 
+  },
     {
-       id: 2,
-       title: "Enterprise RAG Knowledge Base",
-       description: "A fact-grounded Q&A system utilizing Vector Databases (ChromaDB) to process massive documentation while eliminating LLM hallucinations.",
-       image: "/projects/ai2.png", 
-       tags: ["Next.js", "ChromaDB", "GenAI", "Tailwind"],
-       demoUrl: "#",
-       githubUrl: "#", 
-    },
+    id: 2, // Update accordingly
+    title: "Sovereign Shield",
+    description: "A local-first runtime interception layer for AI agents that enforces real-time EU AI Act compliance (Art. 10, 13, 53). It prevents PII leaks and unauthorized cross-border data transfers with <2ms latency.",
+    image: "/projects/sovereign-shield.png", 
+    tags: ["Python", "Cybersecurity", "EU AI Act", "LangChain", "Regex"],
+    demoUrl: "#", 
+    githubUrl: "https://github.com/uditxdubey/MAS_UND", 
+  },
     {
-       id: 3,
-       title: "Production-Ready Predictive Pipeline",
-       description: "End-to-end ML lifecycle project featuring automated feature engineering and containerized deployment for real-time data predictions.",
-       image: "/projects/ai3.png", 
-       tags: ["Docker", "PyTorch", "MLOps", "TypeScript"],
-       demoUrl: "#",
-       githubUrl: "#", 
-    }
+    id: 4, 
+    title: "Validex API & Validator",
+    description: "An AI-driven startup pitch validator that provides structured GO/NO-GO/ASK decisions. Features a real-time FastAPI backend, session-based conversation history, and a modern responsive dashboard for market and technical analysis.",
+    image: "/projects/validex.png", 
+    tags: ["FastAPI", "Uvicorn", "Python", "REST API", "Responsive Design"],
+    demoUrl: "#", // Update if you deploy to Fly.io or Vercel
+    githubUrl: "https://github.com/uditxdubey/Validex", 
+  },
 ];
 
 export const ProjectsSection = () => {
