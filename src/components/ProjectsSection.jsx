@@ -5,7 +5,7 @@ const projects = [
     id: 1, // Update ID as needed
     title: "Industrial Agentic RAG",
     description: "A zero-hallucination multi-agent system designed to query and compare industrial automation manuals using a semantic router and hybrid vector stores to prevent cross-brand data bleeding.",
-    image: "/projects/industrial-rag.png", 
+    image: "/projects/ai1.png", 
     tags: ["Python", "LlamaIndex", "Groq", "Streamlit", "ChromaDB"],
     demoUrl: "#", // Add link if hosted
     githubUrl: "https://github.com/uditxdubey/Industrial-Intelligence-Engine", 
@@ -14,16 +14,16 @@ const projects = [
     id: 2, // Update accordingly
     title: "Sovereign Shield",
     description: "A local-first runtime interception layer for AI agents that enforces real-time EU AI Act compliance (Art. 10, 13, 53). It prevents PII leaks and unauthorized cross-border data transfers with <2ms latency.",
-    image: "/projects/sovereign-shield.png", 
+    image: "/projects/ai2.png", 
     tags: ["Python", "Cybersecurity", "EU AI Act", "LangChain", "Regex"],
     demoUrl: "#", 
     githubUrl: "https://github.com/uditxdubey/MAS_UND", 
   },
     {
-    id: 4, 
+    id: 3, 
     title: "Validex API & Validator",
     description: "An AI-driven startup pitch validator that provides structured GO/NO-GO/ASK decisions. Features a real-time FastAPI backend, session-based conversation history, and a modern responsive dashboard for market and technical analysis.",
-    image: "/projects/validex.png", 
+    image: "/projects/ai3.png", 
     tags: ["FastAPI", "Uvicorn", "Python", "REST API", "Responsive Design"],
     demoUrl: "#", // Update if you deploy to Fly.io or Vercel
     githubUrl: "https://github.com/uditxdubey/Validex", 
